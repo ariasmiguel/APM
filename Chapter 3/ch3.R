@@ -133,7 +133,8 @@ data(cars)
 str(cars)
 carSubset <- cars %>%
   gather(Type, Car, 5:18)
-carSubset <- carSubset %>% filter(Type %in% c("convertible", "coupe", "hatchback", "sedan", "wagon")) %>%
+carSubset <- carSubset %>% 
+  filter(Type %in% c("convertible", "coupe", "hatchback", "sedan", "wagon")) %>%
   select(Price, Mileage, Type)
 carSubset$Type <- as.factor(carSubset$Type)
 

@@ -38,7 +38,7 @@ case <- segData$Case
 # Now remove the columns
 segData <- segData[, -(1:3)]
 
-# The orig data contianed several "status" columns which were binary
+# The orig data contained several "status" columns which were binary
 # versions of the predictors. To remove these, we find the column
 # names containing "Status" and remove them:
 statusColNum <- grep("Status", names(segData))
